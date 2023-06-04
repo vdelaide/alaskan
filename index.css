@@ -94,7 +94,7 @@ nav a{
     background-color: var(--bg-contrast);
 }
 
-.pseudo-btn{
+.button-link{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -106,7 +106,7 @@ nav a{
     background-color: white;
 }
 
-.pseudo-btn a{
+.button-link a{
     color: var(--text-color-muted)
 }
 
