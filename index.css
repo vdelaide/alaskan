@@ -1,0 +1,125 @@
+/* *{outline: 3px solid #00ff2a52} */
+
+/*##########Pre-requisites##########*/
+:root{
+    --bg: #32A6ED;
+    --bg-contrast: #1D69B6;
+    --text-color: white;
+    --text-color-muted: rgb(155, 134, 231)
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    height: 100%;
+    background-color: var(--bg);
+}
+
+/*##########Customizations##########*/
+
+h1, h3, h4, p, a{
+    font-family: Inter, Verdana, Geneva, sans-serif;
+    color: var(--text-color)
+}
+
+h1{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    letter-spacing: 0.75vh;
+}
+
+h3{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: regular;
+}
+
+h4{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: regular;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*##########Header & Navigation##########*/
+
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2vh;
+    background-color: var(--bg-contrast);
+    margin-bottom: 5vh;
+}
+
+nav div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a{
+    font-weight: light;
+    font-size: 1rem;
+    color: var(--text-color);
+    padding: 1vh;
+}
+
+/*##########Main & Hero##########*/
+
+#main-hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+#main-hero > section{
+    height: 70vh;
+    justify-content: center;
+}
+
+.sidebar{
+    display: flex;
+}
+
+.sidebar > div{
+    display: grid;
+    border-radius: 5vh;
+    width: 60%;
+    background-color: var(--bg-contrast);
+}
+
+.pseudo-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-self: center;
+    border-radius: 0.75vh;
+    height: 40%;
+    width: 70%;
+    background-color: white;
+}
+
+.pseudo-btn a{
+    color: var(--text-color-muted)
+}
+
+/*Hero Titles*/
+
+#titles{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#titles img{
+    justify-self: center;
+    height: 25vh;
+    width: 25vh;
+    border-radius: 50%;
+}
