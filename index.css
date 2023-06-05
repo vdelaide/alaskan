@@ -115,6 +115,14 @@ nav a{
     color: var(--text-color-muted)
 }
 
+.button-link img{
+    width: 4vh;
+}
+
+#support img{
+    border-radius: 50%;
+}
+
 /*########## Hero Titles ##########*/
 
 #titles{
