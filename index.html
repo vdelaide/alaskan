@@ -8,11 +8,9 @@
         *Make the navigation bar look cleaner
             --And find a purpose for the anchors in the nav
             --Possibly change up the size of the anchors in nav too
-        *Add actual alt tags
-            --Waiting until I find the right icons to add these
-        *Find actual icons for the sites listed
-        *Change H4 elements to not be frickin massive
-        *Make the wave animation fill the rest of the screen, not just the little portion
+        *Change the letter spacing on the nav anchors
+        *Change the look of the navbar
+        *Fixed the scaling hovering issue
     -->
 
     <head>
@@ -39,8 +37,6 @@
 
         <header>
 
-            <!-- Navbar Starts-->
-
             <nav>
 
                 <div id="primary-nav">
@@ -59,8 +55,6 @@
 
             </nav>
 
-            <!-- Navbar Ends-->
-
         </header>
 
         <main>
@@ -78,24 +72,24 @@
                         <div class="button-link">
 
                             <img src="https://www.youtube.com/s/desktop/b182fc95/img/favicon_32x32.png" alt="YouTube's icon">
-                            <a href="https://www.youtube.com/channel/UCrxUwy45BkZcA_leoMRn35A">Youtube</a>
+                            <p>YouTube</p>
+                            <a href="https://www.youtube.com/channel/UCrxUwy45BkZcA_leoMRn35A"></a>
 
                         </div>
 
                         <div class="button-link">
 
                             <img src="https://abs.twimg.com/favicons/twitter.ico" alt="Twitter's Icon">
-                            <a href="https://twitter.com/AlaskanReality">Twitter</a>
+                            <p>Twitter</p>
+                            <a href="https://twitter.com/AlaskanReality"></a>
 
                         </div>
 
                         <div class="button-link">
 
                             <img src="discord-mark-blue.png" alt="Discord's Icon">
-                            <a href="https://discord.gg/usmg">Discord</a>
-                            <!--
-                                https://discord.com/assets/847541504914fd33810e70a0ea73177e.ico
-                            -->
+                            <p>Discord</p>
+                            <a href="https://discord.gg/usmg"></a>
 
                         </div>
                         
@@ -130,21 +124,23 @@
                         <div class="button-link">
 
                             <img src="https://c5.patreon.com/external/favicon/favicon-32x32.png?v=af5597c2ef" alt="Patreon's Icon">
-                            <a href="https://www.patreon.com/AlaskanReality?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_creator&utm_content=join_link">Patreon</a>
-
+                            <p>Patreon</p>
+                            <a href="https://www.patreon.com/AlaskanReality?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_creator&utm_content=join_link"></a>
                         </div>
 
                         <div class="button-link">
 
                             <img src="https://cdn.streamlabs.com/static/imgs/streamlabs-logos/favicon/favicon-32x32.png" alt="Streamlab's Icon">
-                            <a href="https://streamlabs.com/alaskanreality/tip">Donate</a>
+                            <p>Donate</p>
+                            <a href="https://streamlabs.com/alaskanreality/tip"></a>
 
                         </div>
 
                         <div class="button-link">
 
                             <img src="https://payhip.com/images/designv2/favicon/favicon-32x32.png" alt="PayHip's Icon">
-                            <a href="https://payhip.com/DARPA">Dev Store</a>
+                            <p>Dev Store</p>
+                            <a href="https://payhip.com/DARPA"></a>
 
                         </div>
                         
@@ -158,13 +154,11 @@
 
         </main>
 
-      <!--Wave Animations Starts-->
-
         <div id="wave-container">
 
             <!--
-                Credit to https://github.com/arjungautam1/WaveEffect
-                Edited it a lot to be able to fit the project
+                I've got no idea who this code is really from lol i've seen 3 different people with the same code
+                Edited it a bit to be able to fit the project
             -->
 
             <svg
@@ -187,22 +181,22 @@
                     <use
                     xlink:href="#gentle-wave"
                     x="48" y="0"
-                    fill="rgba(0, 100,200,0.7")/>
+                    fill="rgba(20, 20, 200, 0.7")/>
 
                     <use
                     xlink:href="#gentle-wave"
                     x="48" y="3"
-                    fill="rgba(0,50,255,0.5)"/>
+                    fill="rgba(0, 10, 210, 0.5)"/>
 
                     <use
                     xlink:href="#gentle-wave"
                     x="48" y="5"
-                    fill="rgba(0,0,225,0.3)"/>
+                    fill="rgba(10, 15, 205, 0.3)"/>
 
                     <use 
                     xlink:href="#gentle-wave" 
                     x="48" y="7" 
-                    fill="rgb(0, 0, 255)"/>
+                    fill="rgb(20, 20, 190)"/>
 
                 </g>
 
@@ -210,7 +204,11 @@
 
         </div>
 
-        <!-- Wave Animations End-->
+        <div id="wave-extension">
+
+            <p>hello</p>
+
+        </div>
 
     </body>
 
