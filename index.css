@@ -4,7 +4,7 @@
 :root{
     --bg: #32A6ED;
     --bg-contrast: #1D69B6;
-    --bg-contrast-transparent: rgb(29, 105, 182, 0.85);
+    --bg-contrast-transparent: rgb(29, 105, 182, 0.5);
     --text-color: white;
     --text-color-muted: rgb(155, 134, 231);
 }
@@ -49,8 +49,7 @@ nav{
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 2vh;
-    background-color: var(--bg-contrast-transparent);
-    margin-bottom: 5vh;
+    margin-bottom: 7vh;
 }
 
 nav div{
@@ -59,8 +58,8 @@ nav div{
 }
 
 nav a{
-    font-weight: light;
-    font-size: 1rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.07rem;
     color: var(--text-color);
     padding: 1vh;
 }
@@ -84,7 +83,7 @@ nav a{
 
 .sidebar > div{
     display: grid;
-    border: 2px solid var(--text-color);
+    border: 3px solid var(--text-color);
     border-radius: 2vh;
     width: 60%;
     background-color: var(--bg-contrast-transparent);
@@ -103,17 +102,20 @@ nav a{
     align-items: center;
     justify-content: space-evenly;
     justify-self: center;
+    border: solid 2px var(--text-color);
     border-radius: 0.75vh;
     height: 40%;
     width: 60%;
     background-color: white;
-    transition: transform 0.25s,
-    border 0.25s;
+    transition: background-color 0.3s;
 }
 
 .button-link:hover{
-    transform: scale(1.05);
-    border: solid 2px var(--bg);
+    background-color: var(--bg-contrast-transparent);
+}
+
+.button-link:hover > p{
+    color: white;
 }
 
 .button-link a{
@@ -125,6 +127,7 @@ nav a{
 .button-link p{
     color: var(--text-color-muted);
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 .button-link img{
@@ -139,13 +142,13 @@ nav a{
 
 #titles{
     display: grid;
-    grid-template-rows: 0.4fr 0.25fr 0.25fr;
+    gap: 0.25vh;
 }
 
 #titles img{
     justify-self: center;
-    height: 25vh;
-    width: 25vh;
+    height: 30vh;
+    width: 30vh;
     border-radius: 50%;
 }
 
@@ -167,10 +170,6 @@ h1{
     width: 100%;
 }
 
-/* So basically to make it all look smooth i need to cheat
-(make another div element underneath the waves omg </3
-Didn't want it to come to this*/
-
 .waves{
     position: absolute;
     width: 100%;
@@ -182,7 +181,7 @@ Didn't want it to come to this*/
     background-color: rgb(20, 20, 190);
     z-index: -2;
     bottom: 0;
-    height: 37vh;
+    height: 46vh;
     width: 100%;
 }
 
@@ -228,19 +227,35 @@ Didn't want it to come to this*/
   
 /*########## Media Queries for Mobile ##########*/
 
-@media (max-width: 768px){
-
-    .waves{
-        height: 40px;
-        min-height: 40px;
-    }
+@media (max-width: 925px){
 
     h1{
         font-size: 3rem;
     }
 
-    .sidebar h4{
-        font-size: 1rem;
+    h3{
+        padding: 0 10vh;
+    }
+
+    #main-hero{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    #titles{
+        grid-row: 1;
+        margin-bottom: 10vh;
+    }
+
+    #wave-container{
+        position: fixed;
+    }
+
+    #wave-extension{
+        position: fixed;
+        bottom: 0;
+        height: 46vh;
+        width: 100%;
     }
 
 }
