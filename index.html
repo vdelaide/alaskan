@@ -3,16 +3,16 @@
 
     <!--
         TODO:
-        *Add media queries for mobile devices to look cleaner
-        *Add a moving wave to the background
+        *Completely change the layout of the website for mobile
+            --Title first, then social sidebar then support sidebar
         *Make the navigation bar look cleaner
             --And find a purpose for the anchors in the nav
             --Possibly change up the size of the anchors in nav too
-        *Possibly add a border to the sidebars
-            --Or make them less rounded
         *Add actual alt tags
-        *Mess around with the H1 to look better
+            --Waiting until I find the right icons to add these
         *Find actual icons for the sites listed
+        *Change H4 elements to not be frickin massive
+        *Make the wave animation fill the rest of the screen, not just the little portion
     -->
 
     <head>
@@ -39,6 +39,8 @@
 
         <header>
 
+            <!-- Navbar Starts-->
+
             <nav>
 
                 <div id="primary-nav">
@@ -51,17 +53,21 @@
                 <div id="secondary-nav">
 
                     <a href="#">Third</a>
-                    <a href="#">Fourth</a>
+                    <a href="#">Credit</a>
 
                 </div>
 
             </nav>
+
+            <!-- Navbar Ends-->
 
         </header>
 
         <main>
 
             <div id="main-hero">
+
+                <!-- Sidebar Starts-->
 
                 <section class="socials sidebar">
 
@@ -73,6 +79,9 @@
 
                             <img src="#" alt="">
                             <a href="https://www.youtube.com/channel/UCrxUwy45BkZcA_leoMRn35A">Youtube</a>
+                            <!--
+                                https://www.youtube.com/s/desktop/b182fc95/img/favicon_32x32.png
+                            -->
 
                         </div>
 
@@ -80,6 +89,9 @@
 
                             <img src="#" alt="">
                             <a href="https://twitter.com/AlaskanReality">Twitter</a>
+                            <!--
+                                https://abs.twimg.com/favicons/twitter.ico
+                            -->
 
                         </div>
 
@@ -87,12 +99,19 @@
 
                             <img src="#" alt="">
                             <a href="https://discord.gg/usmg">Discord</a>
+                            <!--
+                                https://discord.com/assets/847541504914fd33810e70a0ea73177e.ico
+                            -->
 
                         </div>
                         
                     </div>
 
                 </section>
+
+                <!-- Sidebar Ends -->
+
+                <!-- Title Starts -->
 
                 <section id="titles">
 
@@ -103,6 +122,10 @@
                     <h3>Proud Roblox Community Owner of over 33k Members, Veteran, Father, Memester</h3>
 
                 </section>
+                
+                <!-- Sidebar Ends -->
+
+                <!-- Sidebar Continuation -->
 
                 <section class="support sidebar">
 
@@ -121,6 +144,9 @@
 
                             <img src="#" alt="">
                             <a href="https://streamlabs.com/alaskanreality/tip">Donate</a>
+                            <!--
+                                https://cdn.streamlabs.com/static/imgs/streamlabs-logos/favicon/favicon-16x16.png
+                            -->
 
                         </div>
 
@@ -128,6 +154,9 @@
 
                             <img src="#" alt="">
                             <a href="https://payhip.com/DARPA">Dev Store</a>
+                            <!--
+                                https://payhip.com/images/designv2/favicon/favicon-32x32.png
+                            -->
 
                         </div>
                         
@@ -135,9 +164,65 @@
 
                 </section>
 
+                <!-- Sidebar End -->
+
             </div>
 
         </main>
+
+      <!--Wave Animations Starts-->
+
+        <div id="wave-container">
+
+            <!--
+                Credit to https://github.com/arjungautam1/WaveEffect
+                Edited it a lot to be able to fit the project
+            -->
+
+            <svg
+            class="waves"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28"
+            preserveAspectRatio="none"
+            shape-rendering="auto"
+            >
+
+                <defs>
+                    <path
+                    id="gentle-wave"
+                    d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
+                </defs>
+
+                <g class="parallax">
+
+                    <use
+                    xlink:href="#gentle-wave"
+                    x="48" y="0"
+                    fill="rgba(0, 100,200,0.7")/>
+
+                    <use
+                    xlink:href="#gentle-wave"
+                    x="48" y="3"
+                    fill="rgba(0,50,255,0.5)"/>
+
+                    <use
+                    xlink:href="#gentle-wave"
+                    x="48" y="5"
+                    fill="rgba(0,0,225,0.3)"/>
+
+                    <use 
+                    xlink:href="#gentle-wave" 
+                    x="48" y="7" 
+                    fill="rgb(0, 0, 255)"/>
+
+                </g>
+
+            </svg>
+
+        </div>
+
+        <!-- Wave Animations End-->
 
     </body>
 

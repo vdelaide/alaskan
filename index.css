@@ -1,11 +1,12 @@
 /* *{outline: 3px solid #00ff2a52} */
 
-/*##########Pre-requisites##########*/
+/*########## Pre-requisites ##########*/
 :root{
     --bg: #32A6ED;
     --bg-contrast: #1D69B6;
+    --bg-contrast-transparent: rgb(29, 105, 182, 0.85);
     --text-color: white;
-    --text-color-muted: rgb(155, 134, 231)
+    --text-color-muted: rgb(155, 134, 231);
 }
 
 html{
@@ -18,29 +19,23 @@ body{
     background-color: var(--bg);
 }
 
-/*##########Customizations##########*/
+/*########## Customizations ##########*/
 
 h1, h3, h4, p, a{
     font-family: Inter, Verdana, Geneva, sans-serif;
-    color: var(--text-color)
-}
-
-h1{
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bolder;
-    letter-spacing: 0.75vh;
+    color: var(--text-color);
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 h3{
     text-align: center;
     font-size: 1rem;
-    font-weight: regular;
 }
 
 h4{
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: regular;
 }
 
@@ -48,13 +43,13 @@ a{
     text-decoration: none;
 }
 
-/*##########Header & Navigation##########*/
+/*########## Header & Navigation ##########*/
 
 nav{
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 2vh;
-    background-color: var(--bg-contrast);
+    background-color: var(--bg-contrast-transparent);
     margin-bottom: 5vh;
 }
 
@@ -70,7 +65,7 @@ nav a{
     padding: 1vh;
 }
 
-/*##########Main & Hero##########*/
+/*########## Main & Hero ##########*/
 
 #main-hero{
     display: grid;
@@ -89,9 +84,19 @@ nav a{
 
 .sidebar > div{
     display: grid;
-    border-radius: 5vh;
+    border: 2px solid var(--text-color);
+    border-radius: 2vh;
     width: 60%;
-    background-color: var(--bg-contrast);
+    background-color: var(--bg-contrast-transparent);
+}
+
+.sidebar h4{
+    font-size: 2rem;
+    margin-top: 5vh;
+}
+
+.sidebar a{
+    font-weight: bold;
 }
 
 .button-link{
@@ -102,7 +107,7 @@ nav a{
     justify-self: center;
     border-radius: 0.75vh;
     height: 40%;
-    width: 70%;
+    width: 60%;
     background-color: white;
 }
 
@@ -110,11 +115,11 @@ nav a{
     color: var(--text-color-muted)
 }
 
-/*Hero Titles*/
+/*########## Hero Titles ##########*/
 
 #titles{
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.4fr 0.25fr 0.25fr;
 }
 
 #titles img{
@@ -122,4 +127,83 @@ nav a{
     height: 25vh;
     width: 25vh;
     border-radius: 50%;
+}
+
+h1{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bolder;
+    letter-spacing: 0.5vh;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+/*########## Wave Effect ##########*/
+
+#wave-container{
+    position: absolute;
+    z-index: -1;
+    top: 350px;
+    width: 100%;
+}
+
+.waves{
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+}
+
+.parallax > use{
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  }
+  
+.parallax > use:nth-child(1){
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+  
+.parallax > use:nth-child(2){
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+  
+.parallax > use:nth-child(3){
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+  
+.parallax > use:nth-child(4){
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever{
+
+    0%{
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100%{
+        transform: translate3d(85px, 0, 0);
+    }
+
+}
+  
+/*########## Media Queries for Mobile ##########*/
+
+@media (max-width: 768px){
+
+    .waves{
+        height: 40px;
+        min-height: 40px;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    .sidebar h4{
+        font-size: 1rem;
+    }
+
 }
