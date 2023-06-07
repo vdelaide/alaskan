@@ -46,14 +46,9 @@ a{
 /*########## Header & Navigation ##########*/
 
 nav{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     padding: 2vh;
     margin-bottom: 7vh;
-}
-
-nav div{
-    display: flex;
     justify-content: space-evenly;
 }
 
@@ -229,7 +224,7 @@ h1{
   
 /*########## Media Queries for Mobile ##########*/
 
-@media (max-width: 925px){
+@media (max-width: 780px){
 
     h1{
         font-size: 3rem;
